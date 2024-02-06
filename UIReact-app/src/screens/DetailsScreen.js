@@ -1,10 +1,16 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View,Button } from 'react-native';
 
-const DetailsScreen = () => {
+const DetailsScreen = ({ navigation }) => {
+    
     return(
         <View style= {{ flex:1, justifyContent: 'center', alignItems:'center'}}>
+            
             <Text>Details Screen</Text>
+            <Button
+                title="API"
+                onPress={() => navigation.navigate('ApiData')}
+            />
         </View>
     );
 };
