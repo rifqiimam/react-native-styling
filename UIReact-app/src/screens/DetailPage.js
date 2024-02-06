@@ -8,7 +8,6 @@ const DetailPage = ({route}) => {
         <Image source={{ uri: user.picture.large }} style={styles.thumbnail} />
         <View style={styles.userInfo}>
           <UserDetail user={user}/>
-          {/* Add more details as needed */}
         </View>
       </View>
     );
