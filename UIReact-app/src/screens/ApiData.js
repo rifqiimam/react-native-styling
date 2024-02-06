@@ -30,6 +30,9 @@ const ApiData = ({navigation}) => {
       <Text>User Data:</Text>
       {userData.map(user => (
         <TouchableOpacity  key={user.login.uuid} onPress={() => navigasi(user)}>
+          <Image source={{ uri: user.picture.large }} style={{ width: 50, height: 50 }} 
+          title="detail"
+          onPress={() => navigation.navigate('detail')} />
         <View >
         <UserDetail user={user}/>
         </View>
