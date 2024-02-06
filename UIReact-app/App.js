@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/stack';
 import HomeScreen from './components/HomeScreen';
-import DetailScreen from './components/DetailScreen';
+import DetailsScreen from './components/DetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,7 +12,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen}/>
-        <Stack.Screen name="Details" component={DetailsScreenScreen}/>
+        <Stack.Screen name="Details" component={DetailsScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
