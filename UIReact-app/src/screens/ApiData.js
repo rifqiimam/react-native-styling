@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import UserDetail from '../components/UserDetail';
 import axios from 'axios';
 
 const ApiData = ({navigation}) => {
@@ -30,10 +31,7 @@ const ApiData = ({navigation}) => {
       {userData.map(user => (
         <TouchableOpacity  key={user.login.uuid} onPress={() => navigasi(user)}>
         <View >
-          <Image source={{ uri: user.picture.large }} style={{ width: 50, height: 50 }} />
-          <Text>{`${user.name.first} ${user.name.last}`}</Text>
-          <Text>Email: {user.email}</Text>
-          <Text>Location: {`${user.location.city}, ${user.location.country}`}</Text>
+        <UserDetail user={user}/>
         </View>
         </TouchableOpacity>
       ))}

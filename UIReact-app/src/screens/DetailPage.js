@@ -1,16 +1,13 @@
 import React from 'react';
 import { Text, View,Image,StyleSheet } from 'react-native';
-
+import UserDetail from '../components/UserDetail';
 const DetailPage = ({route}) => {
     const { user } = route.params;
     return(
         <View style={styles.container}>
         <Image source={{ uri: user.picture.large }} style={styles.thumbnail} />
         <View style={styles.userInfo}>
-          <Text>{`${user.name.first} ${user.name.last}`}</Text>
-          <Text>Email: {user.email}</Text>
-          <Text>Gender: {user.gender}</Text>
-          <Text>Phone: {user.phone}</Text>
+          <UserDetail user={user}/>
           {/* Add more details as needed */}
         </View>
       </View>
